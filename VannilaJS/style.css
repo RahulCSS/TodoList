@@ -1,0 +1,109 @@
+:root{
+    --shadeA: #153677;
+    --shadeB: #4e085f;
+    --bgtodo: #ffffff;
+    --txtclr: #002765;
+    --bginput: #edeef0;
+    --addicon: #2D276E;
+    --rndicon: <i class="fa-regular fa-circle-xmark"></i>;
+    --trash: #ff0000;
+}
+
+*{
+    font-family: sans-serif;
+    color: var(--fonts);
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(315deg, var(--shadeA), var(--shadeB));
+    padding: 10px;
+}
+
+.todoApp{
+    width: 100%;
+    max-width: 50vw;
+    background: var(--bgtodo);
+    margin: 100px auto 20px;
+    padding: 40px 30px 40px;
+    border-radius: 15px;
+}
+
+.todoApp h2{
+    color: var(--txtclr);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.input{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--bginput);
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;;
+    padding: 10px;
+    font-weight: 20px;;
+}
+
+button{
+    border: none;
+    outline: none;
+    padding: 15px 50px;
+    color: var(--bgtodo);
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 30px;
+    background: var(--addicon);
+}
+
+ul li{
+    list-style: none;
+    font-size: 18px;
+    padding: 10px 5px 10px 10px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+
+ul li.checked{
+    text-decoration: line-through;
+} 
+
+ul li i:first-child{
+    margin-right: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+ul li i:nth-child(2){
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    right: 15px;
+    top: 10px;
+}
+
+ul li:hover{
+    background-color: var(--bginput);
+    border-radius: 20px;
+}
+
+ul li :nth-child(2):hover{
+    color: var(--trash);
+}
